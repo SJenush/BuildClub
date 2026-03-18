@@ -934,6 +934,26 @@ footer{
   .hero-date-num{font-size:5vw!important;white-space:nowrap!important;}
   .hero-date-label{font-size:.38rem!important;letter-spacing:.03em!important;}
 }
+
+/* presents Inventria line */
+.hero-presents{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  margin-top:12px;margin-bottom:0;
+}
+.hero-presents-text{
+  font-family:'Share Tech Mono',monospace;
+  font-size:clamp(.7rem,1.5vw,.9rem);
+  color:var(--muted2);letter-spacing:.25em;text-transform:uppercase;
+}
+.hero-presents-name{
+  font-family:'Orbitron',sans-serif;font-weight:900;
+  font-size:clamp(3rem,10vw,8rem);
+  line-height:.88;letter-spacing:.03em;
+  background:linear-gradient(90deg,var(--c3),var(--c2),var(--c4));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  filter:drop-shadow(0 0 24px rgba(255,42,109,.45));
+}
 </style>
 </head>
 <body>
@@ -971,6 +991,11 @@ footer{
   <div class="hero-badge"><div class="badge-dot"></div>Thiagarajar College of Engineering</div>
 
   <h1><span class="line1">Build</span><span class="line2">Club</span></h1>
+
+  <div class="hero-presents" style="position:relative;z-index:2;animation:fadeUp .9s .25s ease both;">
+    <span class="hero-presents-text">presents</span>
+    <span class="hero-presents-name">Inventria</span>
+  </div>
 
   <p class="hero-sub">Where makers meet, ideas ignite, and builders rise. One day of hands-on workshops and an open innovation showcase.</p>
 
@@ -1310,6 +1335,7 @@ footer{
           Register on Google Form
           <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </a>
+        <p class="reg-note">Payment at venue · UPI accepted on the day</p>
       </div>
     </div>
   </div>
