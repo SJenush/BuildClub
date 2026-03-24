@@ -1043,6 +1043,72 @@ footer{
   background-clip:text;
   filter:drop-shadow(0 0 24px rgba(255,42,109,.45));
 }
+* ═══════════════════════════════
+   CONTACT SECTION
+   ═══════════════════════════════ */
+#contact{position:relative;z-index:2;}
+.contact-wrap{
+  max-width:860px;margin:0 auto;
+  padding:0 52px 110px;
+  position:relative;z-index:2;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:2px;
+  margin-top:40px;
+}
+.ccard{
+  background:var(--card);
+  padding:36px 32px;
+  position:relative;overflow:hidden;
+  border:1px solid rgba(0,245,200,.08);
+  transition:border-color .3s,background .3s;
+}
+.ccard:hover{
+  background:var(--card2);
+  border-color:rgba(0,245,200,.22);
+}
+.ccard::before{
+  content:'';position:absolute;
+  width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,245,200,.07) 0%,transparent 70%);
+  top:-60px;right:-60px;pointer-events:none;
+  transition:opacity .3s;
+}
+.ccard:hover::before{opacity:1.6;}
+.ccard-role{
+  font-family:'Share Tech Mono',monospace;font-size:.58rem;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--c1);margin-bottom:10px;
+  filter:drop-shadow(0 0 5px var(--c1));
+}
+.ccard-name{
+  font-family:'Orbitron',sans-serif;font-weight:700;
+  font-size:1.15rem;letter-spacing:.03em;
+  color:var(--white);margin-bottom:16px;
+}
+.ccard-phone{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Share Tech Mono',monospace;font-size:.78rem;
+  letter-spacing:.08em;color:#c0c0e0;
+  text-decoration:none;
+  border:1px solid rgba(0,245,200,.18);
+  padding:9px 16px;
+  transition:all .25s;
+  background:rgba(0,245,200,.03);
+}
+.ccard-phone:hover{
+  border-color:var(--c1);color:var(--c1);
+  background:rgba(0,245,200,.07);
+  box-shadow:0 0 16px rgba(0,245,200,.15);
+}
+.ccard-phone svg{width:14px;height:14px;color:var(--c1);flex-shrink:0;}
+
+@media(max-width:1000px){
+  .contact-grid{grid-template-columns:1fr;}
+  .contact-wrap{padding:0 20px 80px;}
+}
 </style>
   <!-- Vercel Web Analytics -->
 <script>
@@ -1072,6 +1138,7 @@ footer{
     <li><a href="#events">Events</a></li>
     <li><a href="#timings">Timings</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact Us</a></li>
   </ul>
   <a href="#register" class="nav-cta">Register →</a>
 </nav>
@@ -1511,7 +1578,32 @@ footer{
     </div>
   </div>
 </div>
+<div id="contact">
+  <div class="contact-wrap">
+    <div class="sec-eyebrow reveal" style="justify-content:center;"><div class="sec-eyebrow-line"></div>Contact Us</div>
+    <h2 class="sec-title reveal" style="text-align:center;">Get in <span class="grad">Touch.</span></h2>
+    <p class="sec-sub reveal" style="margin:0 auto;text-align:center;">Have questions? Reach out to our team directly.</p>
 
+    <div class="contact-grid">
+      <div class="ccard reveal">
+        <div class="ccard-role">President — Build Club</div>
+        <div class="ccard-name">Kaaviya</div>
+        <a href="tel:+918608508638" class="ccard-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 .02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.9v2.02z"/></svg>
+          +91 8608508638
+        </a>
+      </div>
+      <div class="ccard reveal">
+        <div class="ccard-role">Vice President — Build Club</div>
+        <div class="ccard-name">Emrald Regin</div>
+        <a href="tel:+919940896003" class="ccard-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 .02h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.9v2.02z"/></svg>
+          +91 9940896003
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- ═══ FOOTER ═══ -->
 <div class="footer-bar">
   <footer>
